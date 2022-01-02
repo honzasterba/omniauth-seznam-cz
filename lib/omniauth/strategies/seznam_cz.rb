@@ -16,13 +16,13 @@ module OmniAuth
 
       option :name, 'seznam_cz'
       option :skip_image_info, true
-      option :authorize_options, %i[redirect_uri]
+      option :authorize_options, %i[scope state redirect_uri]
       option :authorized_client_ids, []
 
       option :client_options,
              site: 'https://login.szn.cz/api/v1/oauth',
              authorize_url: 'https://login.szn.cz/api/v1/oauth/auth',
-             token_url: '/token'
+             token_url: 'https://login.szn.cz/api/v1/oauth/token'
 
       def authorize_params
         super.tap do |params|
