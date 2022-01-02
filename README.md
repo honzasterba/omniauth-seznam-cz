@@ -1,5 +1,5 @@
 [![Gem Version](https://badge.fury.io/rb/omniauth-seznam-cz.svg)](https://badge.fury.io/rb/omniauth-seznam-cz)
-[![Build Status](https://travis-ci.com/zquestz/omniauth-seznam-cz.svg)](https://travis-ci.com/zquestz/omniauth-seznam-cz)
+[![Build Status](https://app.travis-ci.com/honzasterba/omniauth-seznam-cz.svg?branch=main)](https://app.travis-ci.com/honzasterba/omniauth-seznam-cz)
 
 # OmniAuth Seznam.cz Strategy
 
