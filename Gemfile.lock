@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    omniauth-seznam-cz (0.0.1)
+    omniauth-seznam-cz (0.0.2)
       oauth2 (~> 1.1)
       omniauth (~> 2.0)
       omniauth-oauth2 (~> 1.7.1)
