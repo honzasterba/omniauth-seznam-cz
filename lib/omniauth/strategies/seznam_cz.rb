@@ -20,9 +20,9 @@ module OmniAuth
       option :authorized_client_ids, []
 
       option :client_options,
-             site: 'https://login.szn.cz/api/v1/oauth',
-             authorize_url: 'https://login.szn.cz/api/v1/oauth/auth',
-             token_url: 'https://login.szn.cz/api/v1/oauth/token'
+             site: 'https://login.szn.cz/api/v1',
+             authorize_url: '/oauth/auth',
+             auth_scheme: :request_body
 
       def authorize_params
         super.tap do |params|
