@@ -31,15 +31,15 @@ describe OmniAuth::Strategies::SeznamCz do
 
   describe '#client_options' do
     it 'has correct site' do
-      expect(subject.client.site).to eq('https://login.szn.cz/api/v1')
+      expect(subject.client.site).to eq('https://login.szn.cz')
     end
 
     it 'has correct authorize_url' do
-      expect(subject.client.options[:authorize_url]).to eq('/oauth/auth')
+      expect(subject.client.options[:authorize_url]).to eq('/api/v1/oauth/auth')
     end
 
     it 'has correct token_url' do
-      expect(subject.client.options[:token_url]).to eq('/oauth/token')
+      expect(subject.client.options[:token_url]).to eq('/api/v1/oauth/token')
     end
 
     describe 'overrides' do
