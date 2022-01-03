@@ -6,13 +6,11 @@ require 'uri'
 
 module OmniAuth
   module Strategies
-    # Main class for Seznam.cz strategy.
     class SeznamCz < OmniAuth::Strategies::OAuth2
       ALLOWED_ISSUERS = ['login.szn.cz'].freeze
       BASE_SCOPES = %w[identity contact-phone avatar].freeze
       DEFAULT_SCOPE = 'identity'
       USER_INFO_URL = 'https://login.szn.cz/api/v1/user'
-      IMAGE_SIZE_REGEXP = /(s\d+(-c)?)|(w\d+-h\d+(-c)?)|(w\d+(-c)?)|(h\d+(-c)?)|c/
 
       option :name, 'seznam_cz'
       option :skip_image_info, true
@@ -23,8 +21,7 @@ module OmniAuth
              site: 'https://login.szn.cz',
              authorize_url: '/api/v1/oauth/auth',
              token_url: '/api/v1/oauth/token',
-             auth_scheme: :request_body,
-             token_params: { 'Content-Type' => 'application/json' }
+             auth_scheme: :request_body
 
       def authorize_params
         super.tap do |params|
