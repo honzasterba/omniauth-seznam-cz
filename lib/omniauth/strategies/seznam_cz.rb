@@ -6,6 +6,7 @@ require 'uri'
 
 module OmniAuth
   module Strategies
+    # Main class for Seznam.cz strategy.
     class SeznamCz < OmniAuth::Strategies::OAuth2
       ALLOWED_ISSUERS = ['login.szn.cz'].freeze
       BASE_SCOPES = %w[identity contact-phone avatar].freeze
@@ -34,14 +35,14 @@ module OmniAuth
         end
       end
 
-      uid { raw_info['sub'] }
+      uid { raw_info['oauth_user_id'] }
 
       info do
         {
-          username: raw_info['username'],
-          email: raw_info['username'],
-          domain: raw_info['domain'],
+          name: "#{raw_info['firstname']} #{raw_info['lastname']}",
+          email: "#{raw_info['username']}@#{raw_info['domain']}",
           firstname: raw_info['firstname'],
+          lastname: raw_info['lastname'],
           contact_phone: raw_info['contact-phone'],
           avatar_url: raw_info['avatar-url']
         }
@@ -49,6 +50,10 @@ module OmniAuth
 
       extra do
         { 'raw_info' => raw_info }
+      end
+
+      def callback_url
+        full_host + callback_path
       end
 
       def raw_info

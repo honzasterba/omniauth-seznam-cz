@@ -47,23 +47,33 @@ Here's an example of an authentication hash available in the callback by accessi
 
 ```ruby
 {
-  "provider" => "seznam_cz",
-  "uid" => "100000000000000000000",
-  "info" => {
-    "name" => "John Smith",
-    "email" => "john@example.com",
-    "first_name" => "John",
-    "last_name" => "Smith",
-    "image" => "https://lh4.googleusercontent.com/photo.jpg",
-    "urls" => {
-      "google" => "https://plus.google.com/+JohnSmith"
-    }
+  "provider": "seznam_cz",
+  "uid": "100000000000000000000",
+  "info": {
+    "name": "Jan Sterba",
+    "email": "jan.sterba@seznam.cz",
+    "firstname": "Jan",
+    "lastname": "Sterba",
+    "contact_phone": null,
+    "avatar_url": null
   },
-  "credentials" => {
-    "token" => "TOKEN",
-    "refresh_token" => "REFRESH_TOKEN",
-    "expires_at" => 1496120719,
-    "expires" => true
+  "credentials": {
+    "token": "TOKEN",
+    "refresh_token": "REFRESH_TOKEN",
+    "expires_at": 1672768905,
+    "expires": true
+  },
+  "extra": {
+    "raw_info": {
+      "advert_user_id": "100000000000000000000",
+      "domain": "seznam.cz",
+      "firstname": "Jan",
+      "lastname": "Sterba",
+      "message": "ok",
+      "oauth_user_id": "100000000000000000001",
+      "status": 200,
+      "username": "jan.sterba"
+    }
   }
 }
 ```
