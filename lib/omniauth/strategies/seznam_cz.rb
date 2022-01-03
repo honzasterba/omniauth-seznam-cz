@@ -23,7 +23,8 @@ module OmniAuth
              site: 'https://login.szn.cz',
              authorize_url: '/api/v1/oauth/auth',
              token_url: '/api/v1/oauth/token',
-             auth_scheme: :request_body
+             auth_scheme: :request_body,
+             token_params: { 'Content-Type' => 'application/json' }
 
       def authorize_params
         super.tap do |params|
