@@ -20,11 +20,9 @@ Gem::Specification.new do |gem|
 
   gem.required_ruby_version = '>= 2.7'
 
-  gem.add_runtime_dependency 'oauth2', '~> 2.0'
-  gem.add_runtime_dependency 'omniauth', '~> 2.0'
-  gem.add_runtime_dependency 'omniauth-oauth2', '~> 1.8'
+  gem.add_dependency 'oauth2', '~> 2.0'
+  gem.add_dependency 'omniauth', '~> 2.0'
+  gem.add_dependency 'omniauth-oauth2', '~> 1.8'
 
-  gem.add_development_dependency 'rake'
-  gem.add_development_dependency 'rspec'
-  gem.add_development_dependency 'rubocop'
+  gem.metadata['rubygems_mfa_required'] = 'true'
 end

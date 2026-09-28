@@ -64,7 +64,7 @@ module OmniAuth
 
       def get_scope(params)
         raw_scope = params[:scope] || DEFAULT_SCOPE
-        scope_list = raw_scope.split(' ').map { |item| item.split(',') }.flatten
+        scope_list = raw_scope.split.map { |item| item.split(',') }.flatten
         scope_list.join(',')
       end
     end
